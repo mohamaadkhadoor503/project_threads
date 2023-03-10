@@ -5,6 +5,7 @@
 package threadsystem;
 
 import DB.dao.Dao;
+import listener.UesrsListener;
 
 /**
  *
@@ -17,7 +18,9 @@ public class ThreadSystem {
      */
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
-        Dao.getConnection();
+UesrsListener ul=new UesrsListener();
+Thread t1=new Thread(ul);
+t1.start();
     }
     
 }
